@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        margin-top: 50px;
+        font-size: 45px;
+    }
+    .main{
+        height: 400px;
+        width: 380px; 
+        margin-top: 80px;
+        border: 2px solid black;
+        background-color: rgb(77, 70, 70);
+    }
+    input{
+        height: 40px;
+        width: 300px;
+        margin-top: 30px;
+        font-size: 25px;text-align: center;
+    }
+    button{
+        height: 50px;
+        width: 90px;
+        margin: 20px 10px 10px 10px;
+        font-size: 22px;
+        background-color: rgb(148, 86, 86);
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: rgb(79, 99, 48);
+    }
+   
+</style>
+<body>
+    <center>
+        <p>Calculator</p>
+    <div class="main">
+        <input type="text" id="inpt1"><br>
+        <input type="text" id="inpt2"><br>
+
+        <button class="btn" onclick="add()">Add</button>
+        <button class="btn" onclick="sub()">Subt</button><br>
+        <button class="btn" onclick="div()">Division</button>
+        <button class="btn" onclick="mult()">Mult</button>
+    </div>
+    <h1 id="show"></h1>
+    </center>
+    <script>
+            
+        function add(){
+            let num1 = document.getElementById("inpt1").value;
+            let num2 = document.getElementById("inpt2").value;
+            let add = parseInt(num1) + parseInt(num2);
+            document.getElementById("show").innerText = +add;
+        }
+
+        function sub(){
+            let num1 = document.getElementById("inpt1").value;
+            let num2 = document.getElementById("inpt2").value;
+            let sub = num1 - num2;
+            document.getElementById("show").innerText = sub;
+        }
+
+        function div(){
+            let num1 = document.getElementById("inpt1").value;
+            let num2 = document.getElementById("inpt2").value;
+            let div = num1 / num2;
+            document.getElementById("show").innerText = div;
+        }
+
+        function mult(){
+            let num1 = document.getElementById("inpt1").value;
+            let num2 = document.getElementById("inpt2").value;
+            let mult = num1 * num2;
+            document.getElementById("show").innerText = mult;
+        }
+    </script>
+</body>
+</html>
